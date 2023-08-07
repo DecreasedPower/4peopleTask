@@ -9,7 +9,7 @@
     private Stack<int> _banknotes = new();
 
     /// <param name="banknotes">Банкноты доступные для выдачи на момент текущей операции.</param>
-    /// <exception cref="NotImplementedException"></exception>
+    /// <exception cref="ArgumentNullException">коллекция с банкнотами равна null</exception>
     public CashMachineHelper(IReadOnlyCollection<BanknoteSet> banknotes)
     {
       if (banknotes is null)
